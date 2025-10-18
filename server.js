@@ -25,6 +25,8 @@ app.use(cookieParser())
 
 app.use('/api', router)
 
+app.get('/', (req, res, next) => res.json({ message: "Api is working" }))
+
 const start = () => {
     try {
       app.listen(port, () => console.log(`Listening on port ${port}`))
